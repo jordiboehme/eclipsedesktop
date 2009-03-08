@@ -13,7 +13,6 @@ import org.eclipse.swt.widgets.TrayItem;
 import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.util.SWTResourceUtil;
 
 public class Util {
   
@@ -24,11 +23,7 @@ public class Util {
     if( descriptor == null ) {
       result = workbench.getSharedImages().getImage( ISharedImages.IMG_OBJ_FILE );
     } else {
-      result = ( Image )SWTResourceUtil.getImageTable().get( descriptor );
-      if( result == null ) {
-        result = descriptor.createImage();
-        SWTResourceUtil.getImageTable().put( descriptor, result );
-      }
+      result = descriptor.createImage();
     }
     if( result == null ) {
       result = workbench.getSharedImages().getImage( ISharedImages.IMG_OBJ_FILE );
