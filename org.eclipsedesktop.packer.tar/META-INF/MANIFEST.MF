@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tar Support for Packer
+Bundle-SymbolicName: org.eclipsedesktop.packer.tar;singleton:=true
+Bundle-Version: 0.9.1
+Bundle-Activator: org.eclipsedesktop.packer.tar.Activator
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Bundle-ClassPath: engine.jar
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipsedesktop.packer,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.apache.ant
+Eclipse-LazyStart: true

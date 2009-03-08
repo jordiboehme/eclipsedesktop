@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-Name: Tpl Plug-in
+Bundle-SymbolicName: org.eclipsedesktop.eclipsemail.tpl
+Bundle-Version: 0.8.0
+Bundle-ClassPath: lib/jaf_1.0.2.jar,lib/mail.jar
+Bundle-Localization: plugin
+Eclipse-LazyStart: true
+Provide-Package: com.sun.activation.registries,
+ com.sun.activation.viewers,
+ javax.activation,
+ com.sun.mail.handlers,
+ com.sun.mail.iap,
+ com.sun.mail.imap,
+ com.sun.mail.imap.protocol,
+ com.sun.mail.pop3,
+ com.sun.mail.smtp,
+ com.sun.mail.util,
+ javax.mail,
+ javax.mail.event,
+ javax.mail.internet,
+ javax.mail.search
+Bundle-Vendor: Eclipsedesktop.org

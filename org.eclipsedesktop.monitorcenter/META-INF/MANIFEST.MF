@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: Monitor Center
+Bundle-SymbolicName: org.eclipsedesktop.monitorcenter;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-Activator: org.eclipsedesktop.monitorcenter.MonitorCenterPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipsedesktop.base,
+ org.eclipse.core.runtime,
+ org.eclipse.ui
+Eclipse-LazyStart: true
+Bundle-ClassPath: monitorcenter.jar
+Provide-Package: org.eclipsedesktop.monitorcenter.core
+Bundle-ManifestVersion: 2

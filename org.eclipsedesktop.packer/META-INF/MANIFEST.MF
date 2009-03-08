@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Name: Packer
+Bundle-SymbolicName: org.eclipsedesktop.packer;singleton:=true
+Bundle-Version: 0.9.1
+Bundle-ClassPath: packer.jar
+Bundle-Activator: org.eclipsedesktop.packer.PackerPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipsedesktop.base,
+ org.eclipse.ui.ide
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2
+Export-Package: org.eclipsedesktop.packer.core

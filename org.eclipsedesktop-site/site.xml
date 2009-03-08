@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipsedesktop.base_0.8.0.jar" id="org.eclipsedesktop.base" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.cpumon_0.8.0.jar" id="org.eclipsedesktop.cpumon" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.eclipsemail_0.8.0.jar" id="org.eclipsedesktop.eclipsemail" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.eclipsesetimon_0.8.0.jar" id="org.eclipsedesktop.eclipsesetimon" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.examem_0.8.0.jar" id="org.eclipsedesktop.examem" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.monitorcenter_0.8.0.jar" id="org.eclipsedesktop.monitorcenter" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.packer_0.8.1.jar" id="org.eclipsedesktop.packer" version="0.8.1">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.sonicplayer_0.8.0.jar" id="org.eclipsedesktop.sonicplayer" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.weblookup_0.8.0.jar" id="org.eclipsedesktop.weblookup" version="0.8.0">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.clock_0.0.4.jar" id="org.eclipsedesktop.clock" version="0.0.4">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <feature url="features/org.eclipsedesktop.beam_0.0.3.jar" id="org.eclipsedesktop.beam" version="0.0.3">
+      <category name="org.eclipsedesktop"/>
+   </feature>
+   <category-def name="org.eclipsedesktop" label="Eclipsedesktop.org">
+      <description>
+         Eclipse as a complete Desktop Environment - with E-Mail, Newsreader, Instant Messenger and other communications software, a web browser, Multimedia Player, Games and search interfaces, and much more helpful functionality, everything integrated.
+      </description>
+   </category-def>
+</site>

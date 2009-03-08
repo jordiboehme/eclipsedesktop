@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipsedesktop.monitorcenter.contributor">
+      <contributor
+            class="org.eclipsedesktop.eclipsesetimon.ui.monitor.Setimon"
+            icon="icons/full/eview16/setilogo.gif"
+            name="Seti Monitor"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            icon="icons/full/eview16/setilogo.gif"
+            class="org.eclipsedesktop.eclipsesetimon.ui.view.SetiView"
+            category="org.eclipsedesktop"
+            name="%setiView.name"
+            id="org.eclipsedesktop.eclipsesetimon.ui.view.SetiView"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipsedesktop.eclipsesetimon.ui.preferences.SetiPreferencePage"
+            name="%preferencePage.name"
+            category="org.eclipsedesktop"
+            id="org.eclipsedesktop.eclipsesetimon.ui.preferences"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+      		class="org.eclipsedesktop.eclipsesetimon.ui.preferences.SetiPreferenceInit"/>
+   </extension>
+</plugin>

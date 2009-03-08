@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipsedesktop.monitorcenter.contributor">
+      <contributor
+            class="org.eclipsedesktop.cpumon.ui.monitor.Cpumon"
+            icon="icons/full/eview16/cpumon.gif"
+            name="CPU Monitor"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            icon="icons/full/eview16/cpumon.gif"
+            class="org.eclipsedesktop.cpumon.ui.view.CpumonView"
+            category="org.eclipsedesktop"
+            name="CPU Monitor"
+            id="org.eclipsedesktop.cpumon.ui.view.CpumonView"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipsedesktop.cpumon.ui.preferences.CpumonPreferencePage"
+            name="CPU Monitor"
+            category="org.eclipsedesktop"
+            id="org.eclipsedesktop.cpumon.ui.preferences"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+      		class="org.eclipsedesktop.cpumon.ui.preferences.CpumonPreferenceInit"/>
+   </extension>
+</plugin>

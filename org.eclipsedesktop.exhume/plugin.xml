@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.jar"
+            id="org.eclipsedesktop.exhume.contribution">
+         <menu
+               label="Eclipsedesktop.org"
+               path="additions"
+               id="org.eclipsedesktop">
+            <separator
+                  name="exhume">
+            </separator>
+         </menu>
+         <action
+               label="Exhume"
+               class="org.eclipsedesktop.exhume.popup.actions.Decompile"
+               menubarPath="org.eclipsedesktop.menu/exhume"
+               enablesFor="1"
+               id="org.eclipsedesktop.exhume.decompile">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipsedesktop.monitorcenter.contributor">
+      <contributor
+            class="org.eclipsedesktop.examem.ui.monitor.Examem"
+            icon="icons/full/eview16/examem.gif"
+            name="Examine Memory"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            icon="icons/full/eview16/examem.gif"
+            class="org.eclipsedesktop.examem.ui.view.ExamemView"
+            category="org.eclipsedesktop"
+            name="Examine Memory"
+            id="org.eclipsedesktop.examem.ui.view.ExamemView"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipsedesktop.examem.ui.preferences.ExamemPreferencePage"
+            name="Examine Memory"
+            category="org.eclipsedesktop"
+            id="org.eclipsedesktop.examem.ui.preferences"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+      		class="org.eclipsedesktop.examem.ui.preferences.ExamemPreferenceInit"/>
+   </extension>
+</plugin>

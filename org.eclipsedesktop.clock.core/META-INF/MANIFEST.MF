@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-SymbolicName: org.eclipsedesktop.clock.core
+Bundle-Version: 0.0.4
+Bundle-ClassPath: clockcore.jar
+Bundle-Activator: org.eclipsedesktop.clock.core.internal.ClockCore
+Bundle-Vendor: %bundleVendor
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Export-Package: org.eclipsedesktop.clock.core.internal.alarm;x-friends:="org.eclipsedesktop.clock.ui",
+ org.eclipsedesktop.clock.core.internal.timer;x-friends:="org.eclipsedesktop.clock.ui"

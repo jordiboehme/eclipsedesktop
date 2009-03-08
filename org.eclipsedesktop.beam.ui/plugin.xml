@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.ui.startup">
+     <startup class="org.eclipsedesktop.beam.ui.StartupReciever">
+     </startup>
+  </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipsedesktop.beam.ui.preferences.BeamPreferencePage"
+            name="Beam"
+            category="org.eclipsedesktop"
+            id="org.eclipsedesktop.beam.ui.preferences"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="org.eclipsedesktop.beam.contribution">
+         <menu
+               label="Beam to ..."
+               path="additions"
+               id="org.eclipsedesktop.beam.menu">
+            <separator
+                  name="group">
+            </separator>
+         </menu>
+         <action
+               label="Custom Peer"
+               class="org.eclipsedesktop.beam.ui.actions.Send"
+               menubarPath="org.eclipsedesktop.beam.menu/group"
+               enablesFor="1"
+               id="org.eclipsedesktop.beam.sendAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Beam Depot"
+            icon="icons/beamdepot.gif"
+            category="org.eclipsedesktop"
+            class="org.eclipsedesktop.beam.ui.views.BeamView"
+            id="org.eclipsedesktop.beam.ui.views.BeamView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="org.eclipsedesktop.beam.ui.views.BeamView"/>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipsedesktop.beam.core.beamparticipant">
+      <beamparticipant
+         class="org.eclipsedesktop.beam.ui.Participant"
+         name="Beam UI"
+         icon="icons/sendbeam.gif"/>
+   </extension>
+
+</plugin>

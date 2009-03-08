@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipsedesktop.packer.engine">
+      <engine class="org.eclipsedesktop.packer.zip.PackerEngine" />
+   </extension>
+   <extension point="org.eclipse.core.runtime.contentTypes">
+      <file-association
+         content-type="org.eclipsedesktop.packer.archive"
+         file-extensions="zip,jar" />
+   </extension>
+</plugin>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="lookups" name="WebLookup Contributions" schema="schema/lookups.exsd"/>
+   <extension
+         point="org.eclipsedesktop.weblookup.lookups">
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.GoogleWebLookup"
+            icon="icons/google.gif"
+            name="Google"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.EclipsearticlesWebLookup"
+            icon="icons/eclipse.gif"
+            name="Eclipse.org Articles"/>
+      <lookup
+            icon="icons/dict_leo.gif"
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.LeoWebLookup"
+            name="LEO (De &lt;-&gt; En)"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.DictTuchemnitzWebLookup"
+            icon="icons/dict_tuchemnitz.gif"
+            name="TU-Chemnitz (De &lt;-&gt; En)"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.WebsterWebLookup"
+            icon="icons/webster.gif"
+            name="Webster"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.WikipediaWebLookup"
+            icon="icons/wikipedia.gif"
+            name="Wikipedia"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.CreativeCommonsWebLookup"
+            icon="icons/cc.gif"
+            name="Creative Commons"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.SelfHtmlWebLookup"
+            icon="icons/selfhtml.gif"
+            name="Self HTML"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.PHPWebLookup"
+            icon="icons/php.gif"
+            name="php.net"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.AmazonWebLookup"
+            icon="icons/amazon.gif"
+            name="Amazon.de"/>
+      <lookup
+            class="org.eclipsedesktop.weblookup.internal.core.lookups.ImdbWebLookup"
+            icon="icons/imdb.gif"
+            name="IMDb"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+		 <command
+		   name="Web Lookup"
+		   description="Eclipsedesktop.org Web Lookup"
+		   categoryId="org.eclipsedesktop"
+		   id="org.eclipsedesktop.weblookup.search">
+		 </command>
+		 <category
+	            name="Eclipsedesktop"
+	            description="Eclipsedesktop"
+	            id="org.eclipsedesktop">
+     </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Web Lookup"
+            description="Web Lookup"
+            visible="true"
+            id="org.eclipsedesktop.weblookup.WebLookupActionSet">
+         <action
+               toolbarPath="Normal/WebLookup"
+               label="Web Lookup"
+               definitionId="org.eclipsedesktop.weblookup.search"
+               tooltip="Web Lookup"
+               icon="icons/weblookup.gif"
+               class="org.eclipsedesktop.weblookup.ui.actions.WebLookupDropDownAction"
+               id="org.eclipsedesktop.weblookup.WebLookupDropDown">
+         </action>
+      </actionSet>
+   </extension>
+ </plugin>

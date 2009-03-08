@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site-build
+      autobuild="false"
+      scrub-output="false"
+      use-console="true">
+   <feature id="org.eclipsedesktop.base" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.cpumon" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.eclipsesetimon" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.examem" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.monitorcenter" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.packer" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.sonicplayer" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.weblookup" version="0.7.0"/>
+   <feature id="org.eclipsedesktop.eclipsemail" version="0.7.0"/>
+</site-build>

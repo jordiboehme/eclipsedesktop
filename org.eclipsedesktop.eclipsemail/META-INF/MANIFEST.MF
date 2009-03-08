@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: Eclipsemail
+Bundle-SymbolicName: org.eclipsedesktop.eclipsemail;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-ClassPath: eclipsemail.jar
+Bundle-Activator: org.eclipsedesktop.eclipsemail.EclipsemailPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipsedesktop.base,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipsedesktop.eclipsemail.tpl
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Eclipsedesktop.org

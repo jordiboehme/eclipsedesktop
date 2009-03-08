@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="engine" name="Packer Engine" schema="schema/engine.exsd"/>
+      
+<extension point="org.eclipse.core.runtime.contentTypes">
+   <content-type id="archive"
+                 name="Archive File " />
+	 </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Eclipsedesktop Packer"
+            icon="icons/full/eview16/packer.gif"
+            contributorClass="org.eclipsedesktop.packer.ui.editors.PackerEditorContributor"
+            class="org.eclipsedesktop.packer.ui.editors.PackerEditor"
+            id="org.eclipsedesktop.packer.ui.editors.PackerEditor"
+            default="true">
+            <contentTypeBinding contentTypeId="org.eclipsedesktop.packer.archive" />
+      </editor>
+   </extension>
+   
+   <!-- EXTRACT ACTIONS -->
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="org.eclipsedesktop.packer.contribution">
+         <menu
+               label="Eclipsedesktop"
+               path="additions"
+               id="org.eclipsedesktop.packer">
+            <separator
+                  name="packer">
+            </separator>
+         </menu>
+         <action
+               label="Extract to Folder"
+               class="org.eclipsedesktop.packer.popup.actions.ExtractToFolder"
+               icon="icons/full/eview16/unpack.gif"
+               menubarPath="org.eclipsedesktop.packer/packer"
+               id="org.eclipsedesktop.packer.extracttofolder">
+         </action>
+         <action
+               label="Extract Here"
+               class="org.eclipsedesktop.packer.popup.actions.ExtractHere"
+               icon="icons/full/eview16/unpack.gif"
+               menubarPath="org.eclipsedesktop.packer/packer"
+               id="org.eclipsedesktop.packer.extracthere">
+         </action>
+       </objectContribution>
+
+      <!-- CREATE ARCHIVE ACTIONS-->
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IResource"
+            id="org.eclipsedesktop.packer.contribution">
+         <menu
+               label="Eclipsedesktop"
+               path="additions"
+               id="org.eclipsedesktop.packer">
+            <separator
+                  name="packer">
+            </separator>
+         </menu>
+         <action
+               label="Create Archive"
+               icon="icons/full/eview16/pack.gif"
+               class="org.eclipsedesktop.packer.popup.actions.CreateArchive"
+               menubarPath="org.eclipsedesktop.packer/packer"
+               id="org.eclipsedesktop.packer.createarchive">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

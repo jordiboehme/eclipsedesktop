@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: Examine Memory
+Bundle-SymbolicName: org.eclipsedesktop.examem;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-ClassPath: examem.jar
+Bundle-Activator: org.eclipsedesktop.examem.ExamemPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipsedesktop.base,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipsedesktop.monitorcenter
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2

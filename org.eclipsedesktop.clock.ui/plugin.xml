@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- Copyright (c) 2006 by Jordi Boehme Lopez and Leif Frenzel.
+     All rights reserved. -->
+<plugin>
+   <!-- extension points -->
+   <extension-point id="clocks" 
+                    name="%extPtClocks_name" 
+                    schema="schema/clocks.exsd"/>
+
+   <!-- extensions --> 
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.eclipsedesktop.clock.ui.internal.views.ClockView"
+            id="org.eclipsedesktop.clock.ui.internal.views.ClockView"
+            category="org.eclipsedesktop"
+            name="%clockView_name"
+            icon="icons/eview16/clock16.gif"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup class="org.eclipsedesktop.clock.ui.internal.EarlyStartup"/>
+   </extension>
+
+   <!-- clocks -->
+   <extension
+         point="org.eclipsedesktop.clock.ui.clocks">
+      <clock
+            id="org.eclipsedesktop.clock.ui.clocks.ananlogClock"
+            name="%analogClock_name"
+            style="org.eclipsedesktop.clock.ui.internal.styles.AnalogClockStyle"/>
+      <clock
+            id="org.eclipsedesktop.clock.ui.clocks.binaryClock"
+            name="%binaryClock_name"
+            style="org.eclipsedesktop.clock.ui.internal.styles.BinaryClockStyle"/>
+      <clock
+            id="org.eclipsedesktop.clock.ui.clocks.digitalClock"
+            name="%digitalClock_name"
+            style="org.eclipsedesktop.clock.ui.internal.styles.DigitalClockStyle"/>
+      <clock
+            id="org.eclipsedesktop.clock.ui.clocks.fuzzyClock"
+            name="%fuzzyClock_name"
+            style="org.eclipsedesktop.clock.ui.internal.styles.FuzzyClockStyle"/>
+   </extension>
+
+</plugin>

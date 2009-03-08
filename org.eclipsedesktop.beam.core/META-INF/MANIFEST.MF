@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Beam Core Plug-in
+Bundle-SymbolicName: org.eclipsedesktop.beam.core; singleton:=true
+Bundle-Version: 0.0.3
+Bundle-Activator: org.eclipsedesktop.beam.core.BeamCorePlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui
+Eclipse-LazyStart: true
+Bundle-ClassPath: beamcore.jar,
+ lib/bcprov-jdk14.jar,
+ lib/jaxen-jdom.jar,
+ lib/jaxen-core.jar,
+ lib/jdom.jar,
+ lib/jxta.jar,
+ lib/jxtacms.jar,
+ lib/jxtaext.jar,
+ lib/jxtaptls.jar,
+ lib/jxtasecurity.jar,
+ lib/jxtashell.jar,
+ lib/log4j.jar,
+ lib/p2psockets-core.jar,
+ lib/saxpath.jar
+Export-Package: org.eclipsedesktop.beam.core,
+ org.eclipsedesktop.beam.core.reciever,
+ org.eclipsedesktop.beam.core.sender

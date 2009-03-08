@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            icon="icons/full/eview16/icon.gif"
+            class="org.eclipsedesktop.eclipsemail.views.OnlineInboxView"
+            name="Online Inbox"
+            id="org.eclipsedesktop.eclipsemail.onlineInboxView"
+            category="org.eclipsedesktop"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            icon="icons/full/eview16/icon.gif"
+            class="org.eclipsedesktop.eclipsemail.views.MessageView"
+            name="Message View"
+            id="org.eclipsedesktop.eclipsemail.messageView"
+            category="org.eclipsedesktop"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipsedesktop.eclipsemail.preferences.EclipsemailPreferencePage"
+            name="Eclipsemail"
+            category="org.eclipsedesktop"
+            id="org.eclipsedesktop.eclipsemail.preferences"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+      		class="org.eclipsedesktop.eclipsemail.preferences.EclipsemailPreferenceInit"/>
+   </extension>
+</plugin>

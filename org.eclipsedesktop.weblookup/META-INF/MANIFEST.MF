@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: Web Lookup
+Bundle-SymbolicName: org.eclipsedesktop.weblookup;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-ClassPath: lookup.jar
+Bundle-Activator: org.eclipsedesktop.weblookup.WebLookupPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipsedesktop.base,
+ org.eclipse.ui,
+ org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Provide-Package: org.eclipsedesktop.weblookup.core
+Bundle-ManifestVersion: 2

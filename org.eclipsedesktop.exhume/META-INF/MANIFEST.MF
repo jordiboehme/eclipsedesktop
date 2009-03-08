@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-Name: Exhume
+Bundle-SymbolicName: org.eclipsedesktop.exhume;singleton:=true
+Bundle-Version: 0.6.0
+Bundle-ClassPath: exhume.jar
+Bundle-Activator: org.eclipsedesktop.exhume.ExhumePlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2

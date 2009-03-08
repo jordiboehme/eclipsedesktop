@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Beam UI Plug-in
+Bundle-SymbolicName: org.eclipsedesktop.beam.ui; singleton:=true
+Bundle-Version: 0.0.3
+Bundle-Activator: org.eclipsedesktop.beam.ui.BeamUiPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipsedesktop.beam.core,
+ org.eclipsedesktop.base
+Eclipse-LazyStart: true
+Bundle-ClassPath: beamui.jar

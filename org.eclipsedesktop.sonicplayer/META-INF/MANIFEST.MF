@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-Name: Sonic Player
+Bundle-SymbolicName: org.eclipsedesktop.sonicplayer;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-ClassPath: sonicplayer.jar,
+ lib/jl0.4.jar,
+ lib/mp3spi1.9.1.jar,
+ lib/tritonus_share.jar,
+ lib/j-ogg-all.jar
+Bundle-Activator: org.eclipsedesktop.sonicplayer.SonicPlayerPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipsedesktop.base
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2

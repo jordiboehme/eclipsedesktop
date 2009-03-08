@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: Eclipse Seti Monitor
+Bundle-SymbolicName: org.eclipsedesktop.eclipsesetimon;singleton:=true
+Bundle-Version: 0.8.0
+Bundle-ClassPath: eclipsesetimon.jar
+Bundle-Activator: org.eclipsedesktop.eclipsesetimon.EclipseSetiPlugin
+Bundle-Vendor: Eclipsedesktop.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipsedesktop.base,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipsedesktop.monitorcenter
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2

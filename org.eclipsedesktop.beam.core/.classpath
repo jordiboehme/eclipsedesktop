@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/bcprov-jdk14.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxen-jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxen-core.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxta.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxtacms.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxtaext.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxtaptls.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxtasecurity.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jxtashell.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/p2psockets-core.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/saxpath.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
