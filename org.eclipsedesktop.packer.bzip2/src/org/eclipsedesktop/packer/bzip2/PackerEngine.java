@@ -2,19 +2,28 @@ package org.eclipsedesktop.packer.bzip2;
 
 import java.io.IOException;
 import java.io.InputStream;
+
 import org.apache.tools.bzip2.CBZip2InputStream;
 import org.eclipse.core.resources.IStorage;
-import org.eclipse.core.runtime.*;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.ui.IStorageEditorInput;
-import org.eclipsedesktop.packer.core.*;
+import org.eclipsedesktop.packer.core.IOUtil;
+import org.eclipsedesktop.packer.core.IPackerEngine;
+import org.eclipsedesktop.packer.core.PackerItem;
 
 public class PackerEngine implements IPackerEngine {
 
-  public boolean isExtensionSupported( final String ext ) {
+  public final boolean isExtensionSupported( final String ext ) {
     return "bz2".equalsIgnoreCase( ext );
   }
 
-  public void extract( final IStorageEditorInput input,
+  public final void extract( final IStorageEditorInput input,
                        final PackerItem[] items,
                        final IPath path,
                        final boolean withSubDirs,
@@ -45,7 +54,13 @@ public class PackerEngine implements IPackerEngine {
           written = true;
         }
       }
-    } finally {
+    } catch (IOException ioe) {
+    	IStatus status = new Status( IStatus.ERROR,
+    								 Activator.PLUGIN_ID,
+    								 "Unable to read BZip2 InputStream",
+    								 ioe);
+    	throw new CoreException( status );
+	} finally {
       try {
         if( zis != null ) {
           zis.close();
@@ -58,7 +73,7 @@ public class PackerEngine implements IPackerEngine {
     }
   }
 
-  public PackerItem[] getPackerItems( final IStorageEditorInput input ) {
+  public final PackerItem[] getPackerItems( final IStorageEditorInput input ) {
     PackerItem[] result = new PackerItem[]{
       new PackerItem( false,
                       new Path( input.getName() ).removeFileExtension().toPortableString(),
@@ -69,12 +84,20 @@ public class PackerEngine implements IPackerEngine {
     return result;
   }
 
-  public IStorage getEntry(final IStorageEditorInput input, final PackerItem packerItem) {
+  public final IStorage getEntry(final IStorageEditorInput input, final PackerItem packerItem) {
     return new IStorage(){
       public InputStream getContents() throws CoreException {
         InputStream contents = input.getStorage().getContents();
         removeMagicNumbers( contents );
-        return new CBZip2InputStream( contents );
+        try {
+			return new CBZip2InputStream( contents );
+		} catch ( IOException ioe ) {
+	    	IStatus status = new Status( IStatus.ERROR,
+					 Activator.PLUGIN_ID,
+					 "Unable to read BZip2 InputStream",
+					 ioe);
+	    	throw new CoreException( status );
+		}
       }
       public IPath getFullPath() {
         return null;
@@ -85,7 +108,7 @@ public class PackerEngine implements IPackerEngine {
       public boolean isReadOnly() {
         return true;
       }
-      public Object getAdapter(Class adapter) {
+      public Object getAdapter(final Class adapter) {
         return null;
       }
     };
