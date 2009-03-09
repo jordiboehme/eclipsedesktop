@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Eclipsedektop.org"
+            id="org.eclipsedesktop">
+      </category>
+      <view
+            name="Nightingale"
+            icon="icons/sample.gif"
+            category="org.eclipsedesktop"
+            class="org.eclipsedesktop.nightingale.views.NightingaleView"
+            id="org.eclipsedesktop.nightingale.views.NightingaleView">
+      </view>
+   </extension>
+
+</plugin>
