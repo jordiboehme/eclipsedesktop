@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Twitter
+Bundle-SymbolicName: net.unto.twitter
+Bundle-Version: 1.0.0.60
+Export-Package: net,
+ net.unto,
+ net.unto.twitter
+Bundle-ClassPath: lib/joda-time-1.6.jar,
+ lib/json-lib-2.2.3-jdk15.jar,
+ lib/commons-httpclient-3.1.jar,
+ lib/commons-lang-2.4.jar,
+ lib/easymock.jar,
+ .
+Require-Bundle: org.apache.commons.logging;bundle-version="1.0.4",
+ org.junit4;bundle-version="4.3.1";resolution:=optional
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
